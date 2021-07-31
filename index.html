@@ -1,1 +1,106 @@
-kontol
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>I Love U - Uum</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+   
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2021—05-25</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> Ali<br />
+			Girl name = <span class="keyword">Miss</span> Uum <br />
+			<span class="comments">*/</span><br />
+			"Meski aku bukan orang pertama, kedua, dan ketiga dalam hatimu, aku harap bisa menjadi yang terakhir dalam hati dan hidupmu."<br />
+			<span class="comments">*/</span><br />
+			"Aku akan selalu mendampingimu serta berusaha memperindah masa depanmu."<br />
+			<span class="comments">*/</span><br />
+			"Aku makin mencintaimu karena aku telah percaya engkau menyukai diriku apa adanya, dan bukan karena hal lain."<br />
+			<span class="comments">*/</span><br />
+			"Pacaran jarak jauh memang tak semudah air yang jatuh, tetapi pacaran jarak jauh mampu menumbuhkan rindu yang utuh."<br />
+			<span class="comments">// "Pada jarak yang memisahkan kita ini, aku percaya ada rindu yang membentang di antaranya, seperti saat ini."</span><br />
+			<span class="keyword">"Jarang bertemu justru membuat kita lebih menghargai pertemuan,</span> lebih banyak merindu, <span class="keyword">dan terlatih untuk setia."</span><br />
+			<span class="placeholder"><span class="comments">//  "Aku titip rindu pada langit yang kau tatap malam ini. Semoga kerlip bintang memberi tanda padamu."</span><br />
+			<span class="placeholder"><span class="comments">// "Untukmu yang jauh di sana dan sedang aku rindukan, semoga kau selalu dilindungi oleh Tuhan."</span><br />
+			<span class="placeholder">Mari kita jaga hati dan kepercayaan yang sudah diukir bersama dan bertemu di hari yang bahagia."<br />
+			<span class="comments">// "Tuhan memang mentakdirkan kita untuk saling berjauhan, tetapi aku yakin Tuhan memiliki rencana besar di balik itu semua."</span><br />
+			<br>
+			<br>
+			Aku ingin mengatakan:<br />
+			Sayang, aku mencintaimu selamanya;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Hai, Uum :)
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Dari<br/>
+					<div class="signature">- Ali</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2021, 04, 25);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+
+	$(document).ready(function(){
+            $('#exampleModal').modal('show');
+        }); 
+}
+ </script>
+
+</body>
+</html>
